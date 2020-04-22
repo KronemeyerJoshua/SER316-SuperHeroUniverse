@@ -1,0 +1,17 @@
+{
+  "heroes": [
+    {"name":  "Hansel and Gretel", "health":  200},
+    {
+      "name": "Rumpelstiltskin",
+      "health": 150
+    },
+    {
+      "name": "Pied Piper",
+      "health": 165
+    },
+    {
+      "name": "Rapnuzel",
+      "health": 135
+    }
+  ]
+}

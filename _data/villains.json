@@ -1,0 +1,8 @@
+{
+  "villains": [
+    {"name":  "Cinderella", "health":  80},
+    {"name": "Count Hermann von Rosenberg", "health": 95 },
+    {"name": "Barbarossa", "health": 75 },
+    {"name": "Helmut", "health": 60 }
+  ]
+}

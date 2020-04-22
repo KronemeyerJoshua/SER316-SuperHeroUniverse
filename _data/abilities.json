@@ -1,0 +1,8 @@
+{
+  "villainAbilities": [
+    {"name": "ShadowNova", "description": "ShadowNova", "damage": 8 }
+  ],
+  "heroAbilities": [
+    {"name": "HolyNova", "description": "HolyNova", "damage": 10 }
+  ]
+}
