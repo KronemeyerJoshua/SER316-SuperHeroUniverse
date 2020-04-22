@@ -7,9 +7,15 @@ import java.io.IOException;
 public final class FileOperations {
 
     public static final String abilityDataLoc;
+    public static final String heroDataLoc;
+    public static final String villainDataLoc;
+    public static final String locationDataLoc;
 
     static {
         abilityDataLoc = "_data/abilities.json";
+        heroDataLoc = "_data/heroes.json";
+        villainDataLoc = "_data/villains.json";
+        locationDataLoc = "_data/locations.json";
     }
 
     public static String readFile(String filename) throws IOException {
