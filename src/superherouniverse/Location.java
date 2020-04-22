@@ -26,10 +26,6 @@ public class Location {
         this.name = name;
     }
 
-    public void addNpc(Npc npc) {
-        npcs.add(npc);
-    }
-
     public boolean isCorrupted() {
         return isCorrupted;
     }
