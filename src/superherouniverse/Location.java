@@ -4,12 +4,12 @@ import java.util.Vector;
 
 public class Location {
     private String name;
-    private Vector<Npc> npcs;
+    private Vector<Base> bases;
     private boolean isCorrupted;
 
-    public Location(String name, Vector<Npc> npcs, boolean isCorrupted) {
+    public Location(String name, Vector<Base> bases, boolean isCorrupted) {
         this.name = name;
-        this.npcs = npcs;
+        this.bases = new Vector<>(bases);
         this.isCorrupted = isCorrupted;
     }
 
@@ -26,14 +26,6 @@ public class Location {
         this.name = name;
     }
 
-    public Vector<Npc> getNpcs() {
-        return npcs;
-    }
-
-    public void setNpcs(Vector<Npc> npcs) {
-        this.npcs = npcs;
-    }
-
     public void addNpc(Npc npc) {
         npcs.add(npc);
     }
@@ -44,5 +36,13 @@ public class Location {
 
     public void setCorrupted(boolean corrupted) {
         isCorrupted = corrupted;
+    }
+
+    public Vector<Base> getBases() {
+        return bases;
+    }
+
+    public void removeBase(Base b) {
+        bases.remove(b);
     }
 }
