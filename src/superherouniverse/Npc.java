@@ -33,4 +33,7 @@ abstract class Npc {
     }
 
     abstract Vector<Ability> getAbilities();
+
+    abstract Npc spawnFrom();
+
 }
