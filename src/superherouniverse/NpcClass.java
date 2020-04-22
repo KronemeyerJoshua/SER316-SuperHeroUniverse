@@ -1,6 +1,6 @@
 package superherouniverse;
 
 public enum NpcClass {
-    VILLIAN,
+    VILLAIN,
     HERO
 }
