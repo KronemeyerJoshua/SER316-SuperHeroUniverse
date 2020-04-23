@@ -2,8 +2,15 @@ package superherouniverse;
 
 public class Ability {
     private int damage;
-    private String description, name;
+    private String description;
+    private String name;
 
+    /**
+     * Constructor for ability.
+     * @param damage ability damage
+     * @param description ability description
+     * @param name ability name
+     */
     public Ability(int damage, String description, String name) {
         this.damage = damage;
         this.description = description;
@@ -32,5 +39,26 @@ public class Ability {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) {
+            return true;
+        }
+
+        if (!(o instanceof Ability)) {
+            return false;
+        }
+
+        Ability a = (Ability)o;
+        return this.getName().equals(a.getName())
+                && this.getDescription().equals(a.getDescription());
+    }
+
+    @Override
+    public int hashCode() {
+        assert false : "hashCode not designed";
+        return 42; // any arbitrary constant will do
     }
 }
