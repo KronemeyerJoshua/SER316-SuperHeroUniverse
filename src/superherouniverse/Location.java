@@ -9,6 +9,10 @@ public class Location {
     private boolean isCorrupted;
     private double encounterChance;
 
+    /**
+     * Constructor location.
+     * Pulls a new random location from locationPool
+     */
     public Location() {
         Random rnd = new Random();
         Location l = LocationList.locationPool.get(rnd.nextInt(LocationList.locationPool.size()));
@@ -18,12 +22,12 @@ public class Location {
         this.encounterChance = l.getEncounterChance();
     }
 
-    public Location(String name, Vector<Base> bases, boolean isCorrupted) {
-        this.name = name;
-        this.bases = new Vector<>(bases);
-        this.isCorrupted = isCorrupted;
-    }
-
+    /**
+     * Constructor for LocationList, setting up custom locations.
+     * @param name Location name
+     * @param isCorrupted Location is only villains
+     * @param encounterChance Chance of fighting in the location
+     */
     public Location(String name, boolean isCorrupted, double encounterChance) {
         this.name = name;
         this.isCorrupted = isCorrupted;
@@ -38,6 +42,10 @@ public class Location {
         this.name = name;
     }
 
+    /**
+     * isCorrupted implies only villains remain.
+     * @return boolean value for isCorrupted
+     */
     public boolean isCorrupted() {
         return isCorrupted;
     }
@@ -46,14 +54,12 @@ public class Location {
         isCorrupted = corrupted;
     }
 
-    public Vector<Base> getBases() {
-        return bases;
-    }
-
-    public void removeBase(Base b) {
-        bases.remove(b);
-    }
-
+    /**
+     * Adds a base to the location.
+     * Maximum of 2 bases can be at any given location
+     * @param b The base object
+     * @return Boolean successfully added or not
+     */
     public boolean addBase(Base b) {
         boolean success = false;
         if (bases.size() < 2) {
@@ -67,18 +73,28 @@ public class Location {
         return encounterChance;
     }
 
+    /**
+     * Gets the base object of Villains.
+     * @return The Base object of villains
+     */
     public Base getVillainBase() {
         for (Base b : bases) {
-            if (b.type == NpcClass.VILLAIN)
+            if (b.getType() == NpcClass.VILLAIN) {
                 return b;
+            }
         }
         return null;
     }
 
+    /**
+     * Gets the base object of Heroes.
+     * @return The Base object of Heroes
+     */
     public Base getHeroBase() {
         for (Base b : bases) {
-            if (b.type == NpcClass.HERO)
+            if (b.getType() == NpcClass.HERO) {
                 return b;
+            }
         }
         return null;
     }
