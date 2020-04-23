@@ -4,7 +4,10 @@ import java.util.Random;
 import java.util.Vector;
 
 public class Villain extends Npc {
-    Vector<Ability> abilities;
+    /**
+     * Constructor for Villain.
+     * Pulls a random villain from villainPool
+     */
     public Villain() {
         Random rnd = new Random();
         Npc v = VillainList.villainPool.get(rnd.nextInt(VillainList.villainPool.size()));
@@ -13,22 +16,24 @@ public class Villain extends Npc {
         abilities = new Vector<>(v.getAbilities());
     }
 
+    /**
+     * Constructor for Villain.
+     * Sets up name and health, used in villainList
+     * @param name Villains Name
+     * @param health Villains Health
+     */
     public Villain(String name, int health) {
-        Random rnd = new Random();
         super.setName(name);
         super.health = health;
         abilities = new Vector<>();
-        abilities.add(AbilityList.villainAbilities.get(rnd.nextInt(AbilityList.villainAbilities.size())));
+        Random rnd = new Random();
+        abilities.add(AbilityList.villainAbilities.get(
+                rnd.nextInt(AbilityList.villainAbilities.size())));
     }
 
     @Override
     public Vector<Ability> getAbilities() {
         return abilities;
-    }
-
-    @Override
-    public Npc spawnFrom() {
-        return null;
     }
 
 }
