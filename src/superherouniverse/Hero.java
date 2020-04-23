@@ -4,7 +4,10 @@ import java.util.Random;
 import java.util.Vector;
 
 public class Hero extends Npc {
-    Vector<Ability> abilities;
+    /**
+     * Hero constructor.
+     * Pulls a hero from the heroPool in heroList
+     */
     public Hero() {
         Random rnd = new Random();
         Npc h = HeroList.heroPool.get(rnd.nextInt(HeroList.heroPool.size()));
@@ -13,22 +16,23 @@ public class Hero extends Npc {
         abilities = new Vector<>(h.getAbilities());
     }
 
+    /**
+     * Allows custom name and health to be set.
+     * via hero constructor
+     * @param name Hero name
+     * @param health Hero Health
+     */
     public Hero(String name, int health) {
-        Random rnd = new Random();
         super.setName(name);
         super.health = health;
         abilities = new Vector<>();
+        Random rnd = new Random();
         abilities.add(AbilityList.heroAbilities.get(rnd.nextInt(AbilityList.heroAbilities.size())));
     }
 
     @Override
     public Vector<Ability> getAbilities() {
         return abilities;
-    }
-
-    @Override
-    public Npc spawnFrom() {
-        return null;
     }
 
     public String toString() {
