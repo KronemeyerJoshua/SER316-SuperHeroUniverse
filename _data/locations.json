@@ -1,10 +1,17 @@
 {
   "locations": [
-    {"name":  "Amazon Rainforest"},
-    {"name":  "Germany"},
-    {"name":  "USA"},
-    {"name":  "Sweden"},
-    {"name":  "Japan"},
-    {"name":  "Coronavirus"}
+    {"name":  "Amazon Rainforest",
+      "encounterChance": 0.4
+    },
+    {"name":  "Germany",
+      "encounterChance": 0.3},
+    {"name":  "USA",
+      "encounterChance": 0.5},
+    {"name":  "Sweden",
+      "encounterChance": 0.3},
+    {"name":  "Japan",
+      "encounterChance": 0.24},
+    {"name":  "Coronavirus",
+      "encounterChance": 0.7}
   ]
 }
