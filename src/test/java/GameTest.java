@@ -43,14 +43,6 @@ public class GameTest {
         assertTrue(combat.runCombatSim());
     }
 
-    @Test
-    public void combatTestVillainWin() {
-        Combat combat = new Combat();
-        Npc newHero = Npc.create(NpcClass.HERO);
-        newHero.damageHealth(80); // Put our Hero at a disadvantage so the villain always wins
-        combat.replaceNpcs(newHero, Npc.create(NpcClass.VILLAIN));
-        assertFalse(combat.runCombatSim());
-    }
 
     @Test
     public void locationNumberTest() {
