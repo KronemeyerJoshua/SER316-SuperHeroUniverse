@@ -28,7 +28,7 @@ public final class LocationList {
         // System.out.println(abilityArray.getJSONObject(0).toString());
         for (int i = 0; i < locationArray.length(); i++) {
             JSONObject loc = locationArray.getJSONObject(i);
-            locationBuilder.add(new Location(loc.getString("name"), false));
+            locationBuilder.add(new Location(loc.getString("name"), false, loc.getDouble("encounterChance")));
         }
 
         // Initialize our static properties
