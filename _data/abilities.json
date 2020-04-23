@@ -1,8 +1,15 @@
 {
   "villainAbilities": [
-    {"name": "ShadowNova", "description": "ShadowNova", "damage": 8 }
+    {"name": "Shadow Nova", "description": "Explode in darkness", "damage": 27 },
+    {"name": "Deathbolt", "description": "It's a bolt of death... Nothing else.", "damage": 33 },
+    {"name": "Evil Wave", "description": "A wave, that's terribly evil", "damage": 21 },
+    {"name": "Special Beam Cannon", "description": "SPECIAL BEAM CANNON!", "damage": 25 }
   ],
   "heroAbilities": [
-    {"name": "HolyNova", "description": "HolyNova", "damage": 10 }
+    {"name": "Holy Nova", "description": "Explode in a radiating light", "damage": 10 },
+    {"name": "Smite", "description": "Conjure a holy beam", "damage": 11 },
+    {"name": "Justice Punch", "description": "PUNCH THEM RIGHT IN THE FACE", "damage": 13 },
+    {"name": "Whip of Truth", "description": "Whip the enemy into truthfulness", "damage": 17 }
+
   ]
 }

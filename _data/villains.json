@@ -3,6 +3,10 @@
     {"name":  "Cinderella", "health":  80},
     {"name": "Count Hermann von Rosenberg", "health": 95 },
     {"name": "Barbarossa", "health": 75 },
-    {"name": "Helmut", "health": 60 }
+    {"name": "Helmut", "health": 60 },
+    {"name":  "Dr. Doomsday", "health":  80},
+    {"name": "Sir Hemmingwith", "health": 95 },
+    {"name": "Associate Professor Dr. Evil", "health": 75 },
+    {"name": "Mysterion", "health": 60 }
   ]
 }

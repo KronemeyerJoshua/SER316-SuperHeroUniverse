@@ -12,6 +12,19 @@
     {
       "name": "Rapnuzel",
       "health": 135
+    },
+    {"name":  "Rick and Morty", "health":  200},
+    {
+      "name": "Jerry",
+      "health": 150
+    },
+    {
+      "name": "Waffleman",
+      "health": 165
+    },
+    {
+      "name": "Bob Belcher",
+      "health": 135
     }
   ]
 }
