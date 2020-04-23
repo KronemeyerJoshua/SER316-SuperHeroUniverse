@@ -28,7 +28,8 @@ public final class FileOperations {
     public static String readFile(String filename) throws IOException {
         StringBuilder loadData = new StringBuilder();
         String s;
-        BufferedReader fileInput = new BufferedReader(new FileReader(filename, StandardCharsets.UTF_8));
+        BufferedReader fileInput = new BufferedReader(
+                new FileReader(filename, StandardCharsets.UTF_8));
         while ((s = fileInput.readLine()) != null) {
             loadData.append(s);
         }
