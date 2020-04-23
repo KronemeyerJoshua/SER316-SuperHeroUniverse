@@ -1,10 +1,11 @@
 package superherouniverse;
 
+import java.io.IOException;
+import java.util.Vector;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.util.Vector;
 
 public final class LocationList {
     public static final Vector<Location> locationPool;
@@ -23,14 +24,16 @@ public final class LocationList {
         // Temp Vectors
         Vector<Location> locationBuilder = new Vector<>();
 
-        // Get our heroes and make them into Hero
-        JSONArray locationArray = locations.getJSONArray("locations");
-        // System.out.println(abilityArray.getJSONObject(0).toString());
-        for (int i = 0; i < locationArray.length(); i++) {
-            JSONObject loc = locationArray.getJSONObject(i);
-            locationBuilder.add(new Location(loc.getString("name"), false, loc.getDouble("encounterChance")));
+        if (locations != null) {
+            // Get our Locations and make them into a Location
+            JSONArray locationArray = locations.getJSONArray("locations");
+            // System.out.println(abilityArray.getJSONObject(0).toString());
+            for (int i = 0; i < locationArray.length(); i++) {
+                JSONObject loc = locationArray.getJSONObject(i);
+                locationBuilder.add(new Location(loc.getString("name"),
+                        false, loc.getDouble("encounterChance")));
+            }
         }
-
         // Initialize our static properties
         locationPool = locationBuilder;
     }
