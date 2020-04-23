@@ -1,5 +1,6 @@
 package superherouniverse;
 
+import java.util.Random;
 import java.util.Vector;
 
 public class Base {
@@ -18,5 +19,10 @@ public class Base {
             success = true;
         }
         return success;
+    }
+
+    public Npc getRandomNpc() {
+        Random rnd = new Random();
+        return npcs.get(rnd.nextInt(npcs.size()));
     }
 }
