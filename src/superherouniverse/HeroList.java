@@ -1,10 +1,10 @@
 package superherouniverse;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
 import java.io.IOException;
 import java.util.Vector;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 public final class HeroList {
     public static final Vector<Npc> heroPool;
@@ -22,15 +22,15 @@ public final class HeroList {
         }
         // Temp Vectors
         Vector<Npc> heroBuilder = new Vector<>();
-
-        // Get our heroes and make them into Hero
-        JSONArray heroArray = heroes.getJSONArray("heroes");
-        // System.out.println(abilityArray.getJSONObject(0).toString());
-        for (int i = 0; i < heroArray.length(); i++) {
-            JSONObject hero = heroArray.getJSONObject(i);
-            heroBuilder.add(new Hero(hero.getString("name"), hero.getInt("health")));
+        if (heroes != null) {
+            // Get our heroes and make them into Hero
+            JSONArray heroArray = heroes.getJSONArray("heroes");
+            // System.out.println(abilityArray.getJSONObject(0).toString());
+            for (int i = 0; i < heroArray.length(); i++) {
+                JSONObject hero = heroArray.getJSONObject(i);
+                heroBuilder.add(new Hero(hero.getString("name"), hero.getInt("health")));
+            }
         }
-
         // Initialize our static properties
         heroPool = heroBuilder;
     }
